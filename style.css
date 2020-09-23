@@ -10,6 +10,19 @@ body {
     justify-content: center;
 }
 
+.btn-container {
+    margin-top: 100px;
+}
+
+.btn-container button {
+    height: 50px;
+    width: 200px;
+    border-radius: 15px;
+    font-size: 30px;
+    font-weight: 700;
+    border: 2px solid black;
+}
+
 #container {
     text-align: center;
     font-family: 'Lato', sans-serif;

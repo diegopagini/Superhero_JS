@@ -59,6 +59,16 @@ function mostrarHeroe(){
         <h5>Tiene ${el.edad} de años</h5>
         </div>`
     })
-    document.getElementById('container').innerHTML = heroe
+    document.getElementById('container').innerHTML = heroe;
 }
 mostrarHeroe();
+
+// function pushHeroe(){
+//     newHero = [];
+//     newHero.push(superHeroes);
+//     return newHero;
+// }
+
+// document.getElementById('btn').addEventListener("click", function(){
+//     pushHeroe();
+// })

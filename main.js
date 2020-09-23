@@ -63,12 +63,6 @@ function mostrarHeroe(){
 }
 mostrarHeroe();
 
-// function pushHeroe(){
-//     newHero = [];
-//     newHero.push(superHeroes);
-//     return newHero;
-// }
-
-// document.getElementById('btn').addEventListener("click", function(){
-//     pushHeroe();
-// })
+document.getElementById('btn').addEventListener("click", function(){
+    document.getElementsByClassName('wraper').style.display = 'none';
+});

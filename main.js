@@ -36,7 +36,7 @@ let superHeroes = [
         edad: 17
     },
     {
-        foto: './Assets/superman.jpg',
+        foto: './Assets/superman.png',
         nombre: 'Superman',
         poder: 'Vuela',
         edad: 35
@@ -52,8 +52,8 @@ let superHeroes = [
 function mostrarHeroe(){
     heroe = '';
     superHeroes.forEach(el => {
-        heroe += `<div>
-        <img src='${el.foto}'>
+        heroe += `<div class="wraper">
+        <img src='${el.foto}' class="img">
         <h2>${el.nombre}</h2>
         <h4>Tiene el poder de: ${el.poder}</h4>
         <h5>Tiene ${el.edad} de años</h5>

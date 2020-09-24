@@ -63,6 +63,17 @@ function mostrarHeroe(){
 }
 mostrarHeroe();
 
-document.getElementById('btn').addEventListener("click", function(){
-    document.getElementsByClassName('wraper').style.display = 'none';
-});
+function ocultar(){
+    document.getElementById('btn').addEventListener('click', function(){
+        document.getElementsByClassName('wraper').style.display = 'none';
+    });
+}
+
+function quitarHeroe(){
+    let popedArray = '';
+    document.getElementById('pop').addEventListener('click', function(){
+        popedArray = superHeroes.pop();
+    })
+    heroe = popedArray;
+    return podedArray;
+}

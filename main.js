@@ -49,31 +49,71 @@ let superHeroes = [
     },
 ]
 
-function mostrarHeroe(){
+
+
+function agregarTodos(){
     heroe = '';
-    superHeroes.forEach(el => {
-        heroe += `<div class="wraper">
-        <img src='${el.foto}' class="img">
-        <h2>${el.nombre}</h2>
-        <h4>Tiene el poder de: ${el.poder}</h4>
-        <h5>Tiene ${el.edad} de años</h5>
+    document.getElementById('agregarTodos').addEventListener('click', function(){
+        superHeroes.forEach(el => {
+            heroe += `<div class="wraper">
+            <img src='${el.foto}' class="img">
+            <h2>${el.nombre}</h2>
+            <h4>Tiene el poder de: ${el.poder}</h4>
+            <h5>Tiene ${el.edad} de años</h5>
+            </div>`
+        })
+        document.getElementById('container').innerHTML = heroe;
+    })
+}
+agregarTodos()
+//esta funciona
+
+
+
+function agregarUno(){
+    contador = 0;
+    unHeroe = '';
+    document.getElementById('agregar').addEventListener('click', function(){
+        unHeroe.push(superHeroes);
+        unHeroe += `<div class="wraper">
+        <img src='${superHeroes[contador].foto}' class="img">
+        <h2>${superHeroes[contador].nombre}</h2>
+        <h4>Tiene el poder de: ${superHeroes[contador].poder}</h4>
+        <h5>Tiene ${superHeroes[contador].edad} de años</h5>
         </div>`
     })
-    document.getElementById('container').innerHTML = heroe;
+    document.getElementById('container').innerHTML = unHeroe;
+    contador++;
 }
-mostrarHeroe();
+agregarUno()
+//No funciona
 
-function ocultar(){
-    document.getElementById('btn').addEventListener('click', function(){
-        document.getElementsByClassName('wraper').style.display = 'none';
-    });
-}
 
-function quitarHeroe(){
-    let popedArray = '';
-    document.getElementById('pop').addEventListener('click', function(){
-        popedArray = superHeroes.pop();
+
+function ocultarTodos(){
+    document.getElementById('quitarTodos').addEventListener('click', function(){
+        document.getElementById('container').style.display = 'none'
     })
-    heroe = popedArray;
-    return podedArray;
 }
+ocultarTodos();
+//Anda, pero despues hay que refrescar la pagina
+
+
+
+function ocultarUno(){
+    nuevoArray = ''
+    document.getElementById('quitar').addEventListener('click', function(){
+        nuevoArray -= superHeroes.pop();
+        superHeroes.forEach(el => {
+            nuevoArray += `<div class="wraper">
+            <img src='${el.foto}' class="img">
+            <h2>${el.nombre}</h2>
+            <h4>Tiene el poder de: ${el.poder}</h4>
+            <h5>Tiene ${el.edad} de años</h5>
+            </div>`
+        })
+        document.getElementById('container').innerHTML = nuevoArray;
+    })
+}
+ocultarUno()
+//Al parecer funciona

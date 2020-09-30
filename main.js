@@ -72,18 +72,20 @@ agregarTodos()
 
 function agregarUno(){
     contador = 0;
-    unHeroe = '';
+    unHeroe = []
+    unHeroeHtml = '';
     document.getElementById('agregar').addEventListener('click', function(){
-        unHeroe.push(superHeroes);
-        unHeroe += `<div class="wraper">
-        <img src='${superHeroes[contador].foto}' class="img">
-        <h2>${superHeroes[contador].nombre}</h2>
-        <h4>Tiene el poder de: ${superHeroes[contador].poder}</h4>
-        <h5>Tiene ${superHeroes[contador].edad} de años</h5>
+        unHeroe.push(superHeroes[contador]);
+        unHeroeHtml += `<div class="wraper">
+        <img src='${unHeroe[superHeroes].foto}' class="img">
+        <h2>${unHeroe[superHeroes].nombre}</h2>
+        <h4>Tiene el poder de: ${unHeroe[superHeroes].poder}</h4>
+        <h5>Tiene ${unHeroe[superHeroes].edad} de años</h5>
         </div>`
     })
-    document.getElementById('container').innerHTML = unHeroe;
+    document.getElementById('container').innerHTML = unHeroeHtml;
     contador++;
+
 }
 agregarUno()
 //No funciona

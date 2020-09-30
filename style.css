@@ -5,7 +5,8 @@
 }
 
 body {
-    display: flex;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
     flex-wrap: wrap;
     justify-content: center;
     height: 100vh;
@@ -14,6 +15,7 @@ body {
 
 .btn-container {
     margin-top: 100px;
+    grid-row: 1;
 }
 
 .btn-container button {
@@ -26,10 +28,12 @@ body {
 }
 
 #container {
+    grid-row: 2;
     text-align: center;
     font-family: 'Lato', sans-serif;
     display: flex;
     flex-wrap: wrap;
+    max-width: 1024px;
 }
 
 .img {

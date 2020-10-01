@@ -70,7 +70,7 @@ agregarTodos()
 
 
 
-function agregarUno(){
+/*function agregarUno(){
     contador = 0;
     unHeroe = []
     unHeroeHtml = '';
@@ -82,12 +82,40 @@ function agregarUno(){
         <h4>Tiene el poder de: ${unHeroe[superHeroes].poder}</h4>
         <h5>Tiene ${unHeroe[superHeroes].edad} de años</h5>
         </div>`
-    })
+    });
+
     document.getElementById('container').innerHTML = unHeroeHtml;
     contador++;
 
 }
-agregarUno()
+//agregarUno()*/
+
+contador = 0;
+heroesList = [];
+heroListHtml = '';
+
+
+document.getElementById('agregar').addEventListener('click', function(){
+    agregarUnoxUno();
+});
+
+
+
+
+function agregarUnoxUno(){
+    heroesList.push(superHeroes[contador]);
+
+    heroListHtml += `<div class="wraper">
+    <img src='${heroesList[contador].foto}' class="img">
+    <h2>${heroesList[contador].nombre}</h2>
+    <h4>Tiene el poder de: ${heroesList[contador].poder}</h4>
+    <h5>Tiene ${heroesList[contador].edad} de años</h5>
+    </div>`
+
+    document.getElementById('container').innerHTML = heroListHtml;
+    contador++;
+}
+
 //No funciona
 
 

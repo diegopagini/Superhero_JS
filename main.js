@@ -70,37 +70,13 @@ agregarTodos()
 
 
 
-/*function agregarUno(){
-    contador = 0;
-    unHeroe = []
-    unHeroeHtml = '';
-    document.getElementById('agregar').addEventListener('click', function(){
-        unHeroe.push(superHeroes[contador]);
-        unHeroeHtml += `<div class="wraper">
-        <img src='${unHeroe[superHeroes].foto}' class="img">
-        <h2>${unHeroe[superHeroes].nombre}</h2>
-        <h4>Tiene el poder de: ${unHeroe[superHeroes].poder}</h4>
-        <h5>Tiene ${unHeroe[superHeroes].edad} de años</h5>
-        </div>`
-    });
-
-    document.getElementById('container').innerHTML = unHeroeHtml;
-    contador++;
-
-}
-//agregarUno()*/
-
 contador = 0;
 heroesList = [];
 heroListHtml = '';
 
-
 document.getElementById('agregar').addEventListener('click', function(){
     agregarUnoxUno();
 });
-
-
-
 
 function agregarUnoxUno(){
     heroesList.push(superHeroes[contador]);
@@ -115,8 +91,7 @@ function agregarUnoxUno(){
     document.getElementById('container').innerHTML = heroListHtml;
     contador++;
 }
-
-//No funciona
+//Quedo funcionando
 
 
 
